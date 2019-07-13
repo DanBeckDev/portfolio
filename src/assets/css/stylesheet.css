@@ -1,0 +1,29 @@
+.hero {
+   width: 100vw;
+   height: 90vh;
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.hero h1{
+   color: aliceblue;
+   width: auto;
+   text-align: center;
+   font-size: 10em;
+}
+
+section h1{
+   text-align: center;
+   padding: 3em;
+   font-size: 3em;
+   margin-bottom: 0;
+   padding-bottom: 0;
+   margin-top: 0;
+   padding-top: 0;
+}
