@@ -5,4 +5,4 @@ import * as serviceWorker from './serviceWorker';
 
 const mountNode = document.getElementById('root');
 ReactDOM.render(<App />, mountNode);
-serviceWorker.unregister();
+serviceWorker.register();

@@ -69,24 +69,24 @@ const listThreeData = [
 
 const makeList = (listData) => {
   const classes = useStyles();
-  const listItems = listData.map((data, key) => <>
-    <ListItem key={key} alignItems="flex-start">
-      <ListItemAvatar>
-        {
-          (typeof data.custIcon === 'undefined')
-            ? <FontAwesomeIcon icon={data.icon} size='4x' style={{ color: data.color }} />
-            : <div style={{ fill: data.color }} dangerouslySetInnerHTML={{ __html: data.icon }}/>
-        }
-      </ListItemAvatar>
-      <ListItemText className={classes.title} primary={data.title} />
-    </ListItem>
-    <Divider variant="inset" component="li" />
-    </>);
-  return (
-    <List className={classes.root}>
+  const ListItems = listData.map((data, key) => <List key={key} className={classes.root}>
       <Divider variant="inset" component="li" />
-      {listItems}
-    </List>
+      <ListItem alignItems="flex-start">
+        <ListItemAvatar>
+          {
+            (typeof data.custIcon === 'undefined')
+              ? <FontAwesomeIcon icon={data.icon} size='4x' style={{ color: data.color }} />
+              : <div style={{ fill: data.color }} dangerouslySetInnerHTML={{ __html: data.icon }}/>
+          }
+        </ListItemAvatar>
+        <ListItemText className={classes.title} primary={data.title} />
+      </ListItem>
+      <Divider variant="inset" component="li" />
+    </List>);
+  return (
+    <>
+      { ListItems }
+    </>
   );
 };
 const ListOne = () => makeList(listOneData);
