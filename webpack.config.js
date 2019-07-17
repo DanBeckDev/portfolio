@@ -5,6 +5,7 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
+  mode: 'production',
   entry: [
     './src/index.js',
   ],
