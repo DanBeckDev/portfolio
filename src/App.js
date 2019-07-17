@@ -31,9 +31,6 @@ class App extends Component {
             <link rel="shortcut icon" href={Ico}/>
             <link rel="icon" type="image/png" href={IcoPng} sizes="32x32"/>
             <link rel="apple-touch-icon" sizes="180x180" href={IcoApple}/>
-            <meta name="description" content="Dan Beck web portfolio showing off technologies such as:
-            Webpack, React, Express.js, SQL and much more..."/>
-            <meta name="google-site-verification" content="X8OqgyRttHLj--5YTsujWFPMcwduXRBONxuj82j7l9I" />
           </Helmet>
           <Header onRouteChange={this.onRouteChange}/>
           <Page1 />
