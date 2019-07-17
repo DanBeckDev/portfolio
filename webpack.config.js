@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -72,6 +72,10 @@ module.exports = {
           type: 'image/png',
         },
       ],
+    }),
+    new WorkboxPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
     }),
   ],
   resolve: {
