@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -86,6 +87,9 @@ module.exports = {
       threshold: 10240,
       minRatio: 0.8,
     }),
+    new CopyPlugin([
+      { from: './robots.txt' },
+    ]),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
