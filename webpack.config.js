@@ -74,6 +74,11 @@ module.exports = {
           size: '384x384',
           type: 'image/png',
         },
+        {
+          src: path.resolve('./src/assets/img/icons/android-chrome-512x512.png'),
+          size: '512x512',
+          type: 'image/png',
+        },
       ],
     }),
     new WorkboxPlugin.GenerateSW({
