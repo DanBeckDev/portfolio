@@ -1,25 +1,26 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Divider from '@material-ui/core/Divider';
 import {
   faHtml5, faCss3Alt, faReact, faJs, faBootstrap, faPhp,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const postgreSQLLogo = require('../../assets/img/PostgreSQL_logo.svg');
-const expressIcon = require('../../assets/img/expressjs-icon.svg');
-const sqlIcon = require('../../assets/img/sql-icon.svg');
-const gitIcon = require('../../assets/img/git-icon.svg');
+const postgreSQLLogo = require('../../assets/img/PostgreSQL-logo.svg');
+const expressIcon = require('../../assets/img/expressjs-logo.svg');
+const sqlIcon = require('../../assets/img/sql-logo.svg');
+const gitIcon = require('../../assets/img/git-logo.svg');
+const webpackIcon = require('../../assets/img/webpack-logo.svg');
+const nodejsIcon = require('../../assets/img/nodejs-logo.svg');
+const npmIcon = require('../../assets/img/npm-logo.svg');
+const reduxIcon = require('../../assets/img/redux-logo.svg');
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
   root: {
-    padding: 20,
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
+    minHeight: 100,
+    maxHeight: 100,
   },
   inline: {
     display: 'inline',
@@ -29,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 'auto',
     marginLeft: 10,
   },
-}));
+});
 
 const listOneData = [
   { title: 'HTML', icon: faHtml5, color: '#f63' },
@@ -54,24 +55,25 @@ const listTwoData = [
 
 const listThreeData = [
   {
-    title: 'Git', icon: gitIcon, custIcon: true, color: 'black',
+    title: 'Git', icon: gitIcon, custIcon: true, color: '',
   },
   {
-    title: 'Express.js', icon: expressIcon, custIcon: true, color: '',
+    title: 'Webpack', icon: webpackIcon, custIcon: true, color: '',
   },
   {
-    title: 'PostgreSQL', icon: postgreSQLLogo, custIcon: true, color: '#fe2',
+    title: 'Node.js', icon: nodejsIcon, custIcon: true, color: '',
   },
   {
-    title: 'SQL', icon: sqlIcon, custIcon: true, color: '',
+    title: 'NPM', icon: npmIcon, custIcon: true, color: '',
+  },
+  {
+    title: 'Redux', icon: reduxIcon, custIcon: true, color: '',
   },
 ];
 
 const makeList = (listData) => {
   const classes = useStyles();
-  const ListItems = listData.map((data, key) => <List key={key} className={classes.root}>
-      <Divider variant="inset" component="li" />
-      <ListItem alignItems="flex-start">
+  const ListItems = listData.map((data, key) => <ListItem className={classes.root} key={key} alignItems="center" divider={true}>
         <ListItemAvatar>
           {
             (typeof data.custIcon === 'undefined')
@@ -80,9 +82,7 @@ const makeList = (listData) => {
           }
         </ListItemAvatar>
         <ListItemText className={classes.title} primary={data.title} />
-      </ListItem>
-      <Divider variant="inset" component="li" />
-    </List>);
+      </ListItem>);
   return (
     <>
       { ListItems }

@@ -42,7 +42,7 @@ class Hero extends Component {
     const { url } = this.state;
     return (
       <div className='hero' style={{ backgroundImage: `url(${url.default})` }}>
-        <h1>I Love to code</h1>
+        <h1 id='textAni' data-text="I Code Things">I Code Things</h1>
       </div>
     );
   }

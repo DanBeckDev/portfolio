@@ -1,49 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import '@babel/polyfill';
-import loadable from '@loadable/component';
 import Page1 from './components/Page1';
 import Header from './components/Header';
 import './assets/css/stylesheet.css';
 import Ico from './assets/img/icons/favicon.ico';
 import IcoPng from './assets/img/icons/favicon-32x32.png';
 import IcoApple from './assets/img/icons/apple-touch-icon.png';
+import IcoSafari from './assets/img/icons/safari-pinned-tab.svg';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      route: 'Page1',
-      component: null,
-    };
-  }
-
-  onRouteChange = (route) => {
-    this.setState({ route });
-  }
-
-  render() {
-    const { route } = this.state;
-    if (route === 'Page1') {
-      return (
-        <>
-          <Helmet>
-            <link rel="shortcut icon" href={Ico}/>
-            <link rel="icon" type="image/png" href={IcoPng} sizes="32x32"/>
-            <link rel="apple-touch-icon" sizes="180x180" href={IcoApple}/>
-          </Helmet>
-          <Header onRouteChange={this.onRouteChange}/>
-          <Page1 />
-        </>
-      );
-    }
-    const PageComponent = loadable(() => import(`./components/${route}`));
-    return (
-      <>
-        <Header />
-        <PageComponent fallback={<div>Loading...</div>} onRouteChange={this.onRouteChange} />
-      </>
-    );
-  }
-}
+const App = () => <>
+  <Helmet>
+    <link rel="shortcut icon" href={Ico} />
+    <link rel="icon" type="image/png" href={IcoPng} sizes="32x32" />
+    <link rel="apple-touch-icon" sizes="180x180" href={IcoApple} />
+    <link rel="mask-icon" href={IcoSafari} />
+    <link rel="msapplication-TileColor" content="#2b5797" />
+  </Helmet>
+  <Header/>
+  <Page1 />
+</>;
 export default App;

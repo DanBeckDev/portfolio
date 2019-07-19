@@ -6,15 +6,18 @@ import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
-import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    background: '#141618',
+  },
+});
+
 
 function HideOnScroll(props) {
   const { children } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger();
-
   return (
     <Slide appear={false} direction="down" in={!trigger}>
       {children}
@@ -26,20 +29,18 @@ HideOnScroll.propTypes = {
   window: PropTypes.func,
 };
 
-const Header = ({ props, onRouteChange }) => {
+const Header = ({ props }) => {
+  const classes = useStyles();
   return (
     <>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar>
+        <AppBar className={classes.root}>
           <Toolbar>
-            <Typography variant="h6">Daniel Beck</Typography>
-            <Button variant="contained" color="primary" onClick={() => onRouteChange('Page2')}>Page2</Button>
-            <Button variant="contained" color="primary" onClick={() => onRouteChange('Page3')}>Page3</Button>
+            <Typography variant="h6">Dan Beck</Typography>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
-      <Toolbar />
     </>
   );
 };
