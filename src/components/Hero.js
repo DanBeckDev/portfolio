@@ -12,7 +12,6 @@ class Hero extends Component {
   updateWidth = () => {
     const windowWidth = window.innerWidth;
     if (windowWidth <= 320) {
-      // const image = require('../assets/img/space-lg.jpg');
       import(/* webpackMode: "eager" */ '../assets/img/space-xs.jpg')
         .then((url) => { this.setState({ url }); });
     } else if (windowWidth <= 640) {

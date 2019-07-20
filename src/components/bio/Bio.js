@@ -22,21 +22,9 @@ const useStyles = makeStyles({
     marginRight: 'auto',
     display: 'block',
   },
-  aboutMe: {
-    textAlign: 'center',
-    fontSize: '2em',
-    paddingLeft: 120,
-    paddingRight: 120,
-    marginTop: 50,
-  },
   root: {
     flexGrow: 1,
     marginTop: 50,
-  },
-  paper: {
-    width: 340,
-    textAlign: 'center',
-    PaddingBottom: '10px',
   },
   section: {
     backgroundImage: 'linear-gradient(-20deg, rgba(38,170,255,1), 45%, rgba(255,255,255,1) 45%)',
@@ -54,7 +42,7 @@ const Bio = () => {
       <Container>
         <Avatar alt="avatar image" src={image} className={classes.avatar} />
         <h1>Hi, I&apos;m Dan. Nice to meet you.</h1>
-        <p className={classes.aboutMe}>
+        <p id='bio'>
           Since I started out coding 6 years ago I have worked through different
            types of applications developing my skills in different aspecs and practices
            of programming. My skills range from designing websites in Photoshop all the
@@ -64,7 +52,7 @@ const Bio = () => {
           <Grid item xs={12}>
             <Grid container justify="center" spacing={2}>
                 <Grid item>
-                  <Paper className={classes.paper}>
+                  <Paper className='paper'>
                     <h2 className={classes.tableHead}>Front-end Development</h2>
                     <List className={classes.list}>
                       <ListOne />
@@ -72,7 +60,7 @@ const Bio = () => {
                   </Paper>
                 </Grid>
                 <Grid item>
-                  <Paper className={classes.paper}>
+                  <Paper className='paper'>
                     <h2 className={classes.tableHead}>Back-end Development</h2>
                     <List className={classes.list}>
                       <ListTwo />
@@ -80,7 +68,7 @@ const Bio = () => {
                   </Paper>
                 </Grid>
                 <Grid item>
-                  <Paper className={classes.paper}>
+                  <Paper className='paper'>
                     <h2 className={classes.tableHead}>Technologies</h2>
                     <List className={classes.list}>
                       <ListThree />
