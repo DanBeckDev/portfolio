@@ -25,6 +25,7 @@ const useStyles = makeStyles({
   root: {
     flexGrow: 1,
     marginTop: 50,
+    paddingBottom: 100,
   },
   section: {
     backgroundImage: 'linear-gradient(-20deg, rgba(38,170,255,1), 45%, rgba(255,255,255,1) 45%)',
