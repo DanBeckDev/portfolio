@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   textField: {
     margin: 8,
     maxWidth: 500,
-    background: '#444',
+    background: 'white',
     marginTop: 20,
     marginBottom: 20,
   },
