@@ -21,12 +21,12 @@
       padding-top: 0;
    }
    
-   .hero h1{
+   #textAni {
       color: #3498db;
       text-align: center;
-      font-size: 2em;
+      font-size: 4em;
       position: relative;
-      width: 99.9%;
+      width: 95%;
       z-index: 2;
    }
 
@@ -41,7 +41,7 @@
       position: absolute;
       margin-left: auto;
       margin-right: auto; 
-      width: 99.9%;
+      width: 95vw;
       z-index: 1;
    }
 
@@ -63,7 +63,7 @@
       padding-top: 0;
    }
    
-   .hero h1{
+   #textAni {
       color: #3498db;
       text-align: center;
       font-size: 10em;
