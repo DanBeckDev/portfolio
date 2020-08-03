@@ -1,0 +1,27 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.8ab1abb15bd7c2c6ebdaef9b7f325d59.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.6cb1062c7d6fe74d0f91f4a1cc95ed62.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.c010870866c0e63ce84324ed289e4fb2.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Dan Beck Portfolio",
+  "short_name": "Portfolio",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "./index.html",
+  "description": "My awesome portfolio Progressive Web App!",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}
